@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "FailoverClusterName": {
+      "value": "SQLCluster"
+    },
+    "existingVmList": {
+      "value": "SQLVM1, SQLVM2"
+    },
+    "SqlServerVersion": {
+        "value": "SQL2016"
+    },
+    "existingFullyQualifiedDomainName": {
+        "value": "name.your.domain"
+    },
+    "existingDomainAccount": {
+      "value": "Specify the account for WS failover cluster creation in UPN format (e.g. example@contoso.com). This account can either be a Domain Admin or at least have permissions to create Computer Objects in default or specified OU"
+    },
+    "existingSqlServiceAccount": {
+        "value": "pecify the domain account under which SQL Server service will run for AG setup in UPN format"
+    }
+  }
+}
