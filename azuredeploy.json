@@ -77,7 +77,7 @@
             "metadata": {
                 "description": "Location of resources that the script is dependent on such as linked templates and DSC modules"
             },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-sql-vm-ag-setup"
+            "defaultValue": "https://raw.githubusercontent.com/stephgou/SQLAW/master/nested/"
         },
         "Location": {
             "type": "string",
@@ -90,9 +90,9 @@
     "variables": {
         "existingVMListArray": "[split(parameters('existingVmList'),',')]",
         "GroupResourceId": "[resourceId('Microsoft.SqlVirtualMachine/SqlVirtualMachineGroups', parameters('FailoverClusterName'))]",
-        "joinClusterTemplateURL": "[concat(parameters('_artifactsLocation'),'/nested/join-cluster.json')]",
+        "joinClusterTemplateURL": "[concat(parameters('_artifactsLocation'),'join-cluster.json')]",
         "joinClusterName": "joincluster",
-        "settingUpAGPowerShellURL": "[concat(parameters('_artifactsLocation'),'/nested/Set-up-AG.ps1')]"
+        "settingUpAGPowerShellURL": "[concat(parameters('_artifactsLocation'),'Set-up-AG.ps1')]"
 
     },
     "resources": [
